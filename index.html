@@ -4,19 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
+    <title>Viaja alrededor de Chile</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="assets\img\favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/c86205d7e6.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/Footer-Clean-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body style="--bs-body-bg: var(--bs-emphasis-color);--bs-body-color: var(--bs-secondary-bg);">
+    <!-- navbar colapsable e iconos con smooth scroll -->
     <nav class="navbar navbar-expand-md fixed-top bg-transparent">
-        <div class="container-fluid"><a class="navbar-brand link-light" href="#">Viajes Chile</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><i class="fa-solid fa-earth-americas navbar-brand link-light">VIAJES CHILE</i><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-end" id="navcol-1">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link link-light" href="#">Inicio</a></li>
@@ -28,6 +30,7 @@
         </div>
     </nav>
     <div class="container" style="display: inline;">
+        <!-- Carrusel de imagenes publicitarias -->
         <header style="margin-top: -24px;">
             <div class="carousel slide" data-bs-ride="false" id="carousel-1" style="display: inline-block;">
                 <div class="carousel-inner">
@@ -42,6 +45,8 @@
     </div>
     <article>
         <section class="d-none d-md-block" style="margin-top: 40px;">
+            <!-- Sección informativa sobre la compañia -->
+            <!-- Este contenedor desaparece al llegar a sm -->
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -77,6 +82,7 @@
             </div>
         </section>
         <section style="margin-top: 30px;">
+            <!-- Sección de los destacados de la pagina -->
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -116,6 +122,7 @@
             </div>
         </section>
         <section class="position-relative py-4 py-xl-5">
+            <!-- Sección para guardar datos de contacto y ser ingresados a bases de datos -->
             <div class="container position-relative">
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4">
@@ -126,7 +133,7 @@
                                     <div class="mb-3"><input class="form-control" type="text" id="name-2" name="name" placeholder="Nombre" style="--bs-body-bg: var(--bs-body-color);"></div>
                                     <div class="mb-3"><input class="form-control" type="email" id="email-2" name="email" placeholder="Correo electrónico" style="--bs-body-bg: var(--bs-body-color);"></div>
                                     <div class="mb-3"><textarea class="form-control" id="message-2" name="message" rows="6" placeholder="Mensaje" style="--bs-body-bg: var(--bs-body-color);"></textarea></div>
-                                    <div><button  id="enviar" class="btn btn-primary d-block w-100" data-bs-toggle="tooltip" type="submit" title="Datos bancarios enviados correctamente.">Enviar</button></div>
+                                    <div><button  id="enviar" class="btn btn-primary d-block w-100" data-bs-toggle="tooltip" type="submit" title="Contactémonos!">Enviar</button></div>
                                 </form>
                             </div>
                         </div>
@@ -138,6 +145,7 @@
     <footer class="text-center py-4" style="background: var(--bs-link-color);">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3 text-center">
+                <!-- Copyright y compañias asociadas -->
                 <div class="col">
                     <p class="text-muted my-2">Copyright&nbsp;© 2024 VIAJES CHILE</p>
                 </div>
@@ -157,10 +165,12 @@
             </div>
         </div>
     </footer>
+    <!-- Distintos scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script>
         $(document).ready(function(){
+            // Funcion de smooth scroll dentro de la pagina
             $(document).on('click', '.smooth-link', function(){
                 function scrollToAnchor(selector){
                      const destination = $('#' + aid);
@@ -169,6 +179,7 @@
                  },'slow');
 }
             });
+            // funcion para avisar al visitante que su informacion se ha guardado
             $('#enviar').click(function() {
                 alert('Datos enviados correctamente')
             })
